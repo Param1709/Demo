@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <h1>Todays Date is...</h1>
+    <p id="MyCalendar"></p>
+    <script>
+        function showTime(){
+            var date = new Date();
+            var y = date.getFullYear();
+            var m = date.getMonth();
+            var d = date.getDay();
+
+            if(m == 12){
+                m = 1;
+            }
+            var calender = "Date: " + date "/"+ m +"/"+ y + " Day: " + d;
+            document.getElementById("MyCalendar").innerText = calender;
+        }
+    </script>
+</html>
