@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Stop Changing Numbers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input {
+            padding: 8px;
+            font-size: 16px;
+            width: 250px;
+        }
+
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Stop Changing Numbers</h1>
+    <p>Enter a number (leading zeros and long numbers will be preserved):</p>
+
+    <input id="numberInput" type="text" placeholder="Enter number as text">
+    <button onclick="showNumber()">Show Preserved Number</button>
+
+    <h2>Result:</h2>
+    <pre id="output"></pre>
+
+    <script>
+        function showNumber() {
+            const input = document.getElementById('numberInput').value;
+
+            if (!/^\d+$/.test(input)) {
+                document.getElementById('output').textContent =
+                    "Invalid input. Please enter digits only.";
+                return;
+            }
+
+            document.getElementById('output').textContent =
+                "You entered: " + input;
+        }
+    </script>
+</body>
+
+</html>
